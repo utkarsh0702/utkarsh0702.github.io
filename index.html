@@ -20,10 +20,10 @@
  }
  
  #div2{
-  width:1350px;
-  height:1000px;
-  background-color: green;
- }
+    width:1348px;
+    height:1000px;
+    background-image: linear-gradient(to left, blueviolet, pink);
+}
  #parallax{
     width: 1348px;
     height: 300px;
@@ -38,92 +38,135 @@
         font-family: sans-serif;
         z-index: 1;
     }
-  .smoke{
-                height: 400px;
-                width: 1348px;
-            }
-            section{
-                height: 400px;
-                width: 1348px;
-                background: #000;
-            }
-            section:before{
-                content: '';
-                position: absolute;
-                left: 150px;
-                width: 1200px;
-                height: 300px;
-                background: linear-gradient(to right, #f00, #f00,#0f0,#0ff,#ff0,#0ff);
-                mix-blend-mode: color;
-                pointer-events: none;
-            }
-            video{
+    #div3{
+                position: relative;
                 width: 100%;
-                height: 400px;
-            }
-            h1{
-                position: absolute;
-                margin-top: -235px;
-                width: 100%;
-                text-align: center;
-                color:deepskyblue;
-                font-size: 4em;
+                height: 50vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+                background-image: url(images/financial-office-assistant-program-web-1024x300.jpg);
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+            } 
+           #div3 h2{
+               font-size: 7em;
                 font-family: sans-serif;
-                letter-spacing: 0.1em;
+                color: crimson;
+                text-transform: uppercase;
+                margin-top: 50px;
+                display: flex;
             }
-            h1 span{
+           #div3 h2 span{
+                transition: 1.5s;
+            }
+            #div3 h2:hover span{
+                filter: blur(20px);
                 opacity: 0;
-                display: inline-block;
-                animation: animate 1s linear forwards;
-				-webkit-animation: animate 1s linear forwards;
+                transform: scale(2);
             }
-            @keyframes animate{
-                0%{
-                    opacity: 0;
-                    transform: rotateY(90deg);
-                    filter: blur(10px);
-                }
-                100%{
-                    opacity: 1;
-                    transform: rotateY(0deg);
-                    filter: blur(0px);
-                }
+            #div3 h2 span:nth-child(10n+1){
+                transition-delay: 0s;
             }
-			@-webkit-keyframes animate{
-                0%{
-                    opacity: 0;
-                    transform: rotateY(90deg);
-                    filter: blur(10px);
-                }
-                100%{
-                    opacity: 1;
-                    transform: rotateY(0deg);
-                    filter: blur(0px);
-                }
+            #div3 h2 span:nth-child(10n+2){
+                transition-delay: 0.16s;
             }
-            h1 span:nth-child(1){
-                animation-delay: 1s;
+            #div3 h2 span:nth-child(10n+3){
+                transition-delay: 0.32s;
             }
-            h1 span:nth-child(2){
+            #div3 h2 span:nth-child(10n+4){
+                transition-delay: 0.48s;
+            }
+            #div3 h2 span:nth-child(10n+5){
+                transition-delay: 0.64s;
+            }
+            #div3 h2 span:nth-child(10n+6 ){
+                transition-delay: 0.80s;
+            }
+    #div4{
+        position: relative;;
+    width:1348px;
+    height:800px;
+    background-image: linear-gradient(to top,darkorange,  yellow);
+}
+            #div4 .box{
+                margin-top: 70px;
+                width: 20%; 
+                float: left;
+            }
+            #div4 .box h2{
+                text-align: center;
+                color:chocolate;
+                text-transform: uppercase;
+            }
+            #div4 .box .chart{
+                position: relative;
+                width: 160px;
+                height: 180px;
+                margin: 0 auto;
+                text-align: center;
+                font-size: 42px;
+                line-height: 180px;
+            }
+            #div4 .box canvas{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+    #div5{
+                display: flex;
+                justify-content: center;
+                height: 125vh;
+                font-family:fantasy;
+                background-image: linear-gradient(to left, black, grey);
+            }
+            #div5 h2{
+                margin-top: 50px;
+                font-size: 6em;
+                color: #333;
+                font-weight: 500;
+            }
+            #div5 h2 span{
+                animation: animate 2.5s linear infinite;
+            }
+            #div5 h2 span:nth-child(1){
+                animation-delay: 0.3s;
+            }
+            #div5 h2 span:nth-child(2){
+                animation-delay: 0.6s;
+            }
+            #div5 h2 span:nth-child(3){
+                animation-delay: 0.9s;
+            }
+            #div5 h2 span:nth-child(4){
+                animation-delay: 1.2s;
+            }
+            #div5 h2 span:nth-child(5){
                 animation-delay: 1.5s;
             }
-            h1 span:nth-child(3){
-                animation-delay: 2s;
+            #div5 h2 span:nth-child(6){
+                animation-delay: 1.8s;
             }
-            h1 span:nth-child(4){
-                animation-delay: 2.5s;
+            #div5 h2 span:nth-child(7){
+                animation-delay: 2.1s;
             }
-            h1 span:nth-child(5){
-                animation-delay: 3s;
+            #div5 h2 span:nth-child(8){
+                animation-delay: 2.4s;
             }
-            h1 span:nth-child(6){
-                animation-delay: 3.5s;
-            }
-            h1 span:nth-child(7){
-                animation-delay: 4s;
-            }
-            h1 span:nth-child(8){
-                animation-delay: 4.5s;
+            @keyframes animate{
+                0%,80%{
+                    color: #333;
+                    text-shadow: none;
+                }
+                100%{
+                    color: #fff;
+                    text-shadow: 0 0 10px #fff
+                    0 0 20px #fff
+                    0 0 40px #fff
+                    0 0 80px #fff
+                    0 0 120px #fff
+                    0 0 160px #fff;
+                }
             }
  </style>
 </head>
